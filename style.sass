@@ -5,6 +5,8 @@
 body
   background: white
   font-family: 'PT Sans', Helvetica, sans-serif
+  color: #343434
+
 $link: #005bab
 a
   color: $link
@@ -84,60 +86,59 @@ header
         padding-left: 20px
 
 
-  ul.menu
-    white-space: nowrap
-    display: inline-block
-    clear: both
+ul.menu, .button
+  white-space: nowrap
+  display: inline-block
+  clear: both
 
-    &.request
-      margin-left: 23px
-      margin-right: 5px
-    li
-      list-style-type: none
-      float: left
-      background: #004b9c url('images/menu.png')
-      border-left: 1px solid #165ea2
-      border-right: 1px solid #0b3054
+  &.request
+    margin-left: 23px
+    margin-right: 5px
+  li
+    list-style-type: none
+    float: left
+    background: #004b9c url('images/menu.png')
+    border-left: 1px solid #165ea2
+    border-right: 1px solid #0b3054
+    &.orange
+      background: #cc6d28 url('images/orange_btn.png')
+    &.green
+      background: #709c1a url('images/green_btn.png')
+    &.first
+      border-left: none
+    &.last
+      border-right: none
+    &.borderless
+      border: none
+      width: 3px
+      height: 42px
+    &.left_side
+      background: url('images/left_menu.png') no-repeat
       &.orange
-        background: #cc6d28 url('images/orange_btn.png')
+        background: url('images/orange_btn_left.png') no-repeat
       &.green
-        background: #709c1a url('images/green_btn.png')
-      &.first
-        border-left: none
-      &.last
-        border-right: none
-      &.borderless
-        border: none
-        width: 3px
-        height: 42px
-      &.left_side
-        background: url('images/left_menu.png') no-repeat
-        &.orange
-          background: url('images/orange_btn_left.png') no-repeat
-        &.green
-          background: url('images/green_btn_left.png') no-repeat
-      &.right_side
-        background: url('images/right_menu.png') right top no-repeat
-        &.orange
-          background: url('images/orange_btn_right.png') right top no-repeat
-        &.green
-          background: url('images/green_btn_right.png') right top no-repeat
-      &.man a
-        background: url('images/man.png') no-repeat left center
-        padding-left: 14px
-        margin-left: 14px
-      &.pen a
-        background: url('images/pen.png') no-repeat left center
-        padding-left: 16px
-        margin-left: 16px
-      a
-        color: white
-        text-decoration: none
-        font-weight: bold
-        font-size: 14px
-        display: block
-        padding: 14px 25px
-
+        background: url('images/green_btn_left.png') no-repeat
+    &.right_side
+      background: url('images/right_menu.png') right top no-repeat
+      &.orange
+        background: url('images/orange_btn_right.png') right top no-repeat
+      &.green
+        background: url('images/green_btn_right.png') right top no-repeat
+    &.man a
+      background: url('images/man.png') no-repeat left center
+      padding-left: 14px
+      margin-left: 14px
+    &.pen a
+      background: url('images/pen.png') no-repeat left center
+      padding-left: 16px
+      margin-left: 16px
+    a
+      color: white
+      text-decoration: none
+      font-weight: bold
+      font-size: 14px
+      display: block
+      padding: 14px 25px
 
 .gallery
   margin-top: 20px
@@ -183,16 +184,16 @@ header
             background-position: -90px 0
           &.active
             background-position: -50px 0 
-
+$arr_top: 100px
 .larr
   left: -30px
-  top: 50px
+  top: $arr_top
   position: absolute
   padding: 10px
   background: url('images/left_arrow.png') no-repeat
 .rarr
   right: -40px
-  top: 50px
+  top: $arr_top
   position: absolute
   padding: 10px
   background: url('images/right_arrow.png') no-repeat
@@ -233,6 +234,7 @@ header
       border: 1px solid transparent
       margin-right: 10px
       padding-right: 20px
+      padding-bottom: 20px
       +border-radius(3px)
       &:hover
         background: #eceae1
@@ -261,3 +263,45 @@ header
         u
           text-decoration: none
           font-size: 18px
+.infoblock
+  margin-top: 40px
+  width: 440px
+  float: left
+  overflow: hidden
+  margin-bottom: 80px
+  &.customers
+    margin-right: 50px
+    h2
+      padding-left: 28px
+      background: url('images/customers.png') no-repeat
+  &.applicants
+    h2
+      background: url('images/applicants.png') no-repeat 0 3px
+  h2
+    font-weight: bold
+    font-size: 24px
+    padding-left: 34px
+    margin-bottom: 15px
+  p.info
+    font-size: 13px
+    border-bottom: 1px solid #e1e1e1
+    padding-bottom: 20px
+    margin-bottom: 20px
+    line-height: 20px
+  strong
+    font-weight: bold
+    font-size: 16px
+  p.call_num
+    font-size: 12px
+    margin: 15px 0
+    margin-bottom: 20px
+    span
+      font-size: 14px
+      font-weight: bold
+
+.work_with_us
+  clear: both
+  h2
+    font-weight: bold
+    font-size: 24px
+    margin-bottom: 15px
