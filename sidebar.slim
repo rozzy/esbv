@@ -1,0 +1,4 @@
+.sidebar
+  - items = { "about" => "О компании", "outsource" => "Кадровый аутсорсинг", "lizpers" => "Лизинг персонала", "outstaff" => "Аутстаффинг", "benefits" => "Преимущества", "partners" => "Партнёры", "clients" => "Клиенты", "reviews" => "Отзывы", "send_request" => "Отправить заявку"}
+  - items.each do |id, name|
+    a class="#{"active" if id == @page}" href="#": span =name
