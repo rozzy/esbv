@@ -2,6 +2,22 @@
 @import compass/reset
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic)
 
+=button_state($t, $color1, $color2)
+  &:hover
+    & .#{$t}
+      background: $color1 url(images/#{$t}_hover.png)
+    & .left_side.#{$t}
+      background: url(images/#{$t}_hover_left.png) no-repeat
+    & .right_side.#{$t}
+      background: url(images/#{$t}_hover_right.png) right top no-repeat
+  &:active
+    & .#{$t}
+      background: $color2 url(images/#{$t}_active.png)
+    & .left_side.#{$t}
+      background: url(images/#{$t}_active_left.png) no-repeat
+    & .right_side.#{$t}
+      background: url(images/#{$t}_active_right.png) right top no-repeat
+
 body
   background: white
   font-family: 'PT Sans', Helvetica, sans-serif
@@ -10,6 +26,8 @@ body
 $link: #005bab
 a
   color: $link
+  &:hover
+    color: #0b74d0
   
   &.local
     text-decoration: none
@@ -20,7 +38,6 @@ a
 .wrapper
   width: 960px
   margin: 0 auto
-
 header
   margin-top: 30px
   white-space: nowrap
@@ -88,21 +105,27 @@ header
         padding-left: 20px
 
 
-ul.menu, .button
+ul.menu_top, .button
   white-space: nowrap
   display: inline-block
   vertical-align: top
   clear: both
-
+  +button_state('orange', #f19245, #c05b14)
+  +button_state('green', #88b329, #71981b)
   &.request
     margin-left: 23px
     margin-right: 5px
   li
     list-style-type: none
     float: left
-    background: #004b9c url('images/menu.png')
     border-left: 1px solid #165ea2
     border-right: 1px solid #0b3054
+    &.menu
+      background: #004b9c url('images/menu.png')
+      &:hover
+        background: #0970c7 url('images/menu_hover.png')
+      &:active
+        background: #035ba2 url('images/menu_active.png')
     &.orange
       background: #cc6d28 url('images/orange_btn.png')
     &.green
@@ -370,6 +393,19 @@ footer
     border-bottom: 1px solid #aabeda
   .del
     margin: 0 10px
+
+ol
+  list-style: decimal
+  margin: 20px 0
+  margin-left: 35px
+  li
+    margin: 15px 0
+    padding-left: 5px
+    font-size: 13px
+    color: #005bab
+    span
+      color: #343434
+
 ul.rb
   list-style-image: url('images/bullet.png')
   margin: 20px 0
@@ -386,6 +422,27 @@ h1
   font-weight: bold
   letter-spacing: 3px
   text-transform: uppercase
+  margin-bottom: 30px
+h2
+  font-size: 24px
+  font-weight: bold
+  margin: 20px 0
+  margin-top: 40px
+h3
+  font-size: 18px
+  font-weight: bold
+  margin: 10px 0
+  margin-top: 30px
+table
+  color: #545454
+  thead
+    border-bottom: 2px solid #e1e1e1
+    td
+      font-weight: bold
+  td
+    min-width: 120px
+    padding: 15px 20px
+    border: 1px solid #e1e1e1
 .sidebar
   display: inline-block
   vertical-align: top

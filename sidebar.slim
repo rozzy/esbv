@@ -1,4 +1,4 @@
 .sidebar
-  - items = { "about" => "О компании", "outsource" => "Кадровый аутсорсинг", "lizpers" => "Лизинг персонала", "outstaff" => "Аутстаффинг", "benefits" => "Преимущества", "partners" => "Партнёры", "clients" => "Клиенты", "reviews" => "Отзывы", "send_request" => "Отправить заявку"}
+  - items = { "about" => "О компании", "outsourcing" => "Кадровый аутсорсинг", "team_leasing" => "Лизинг персонала", "outstaffing" => "Аутстаффинг", "benefits" => "Преимущества", "partners" => "Партнёры", "clients" => "Клиенты", "reviews" => "Отзывы", "send_request" => "Отправить заявку"}
   - items.each do |id, name|
-    a class="#{"active" if id == @page}" href="#": span =name
+    a class="#{"active" if id == @page}" href="#{id}": span =name
