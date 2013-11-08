@@ -53,12 +53,14 @@ body {
 
 a {
   color: #005bab; }
+  a:hover {
+    color: #0b74d0; }
   a.local {
     text-decoration: none; }
     a.local span {
       border-bottom: 1px dashed #aabeda; }
 
-clear {
+.clear, .clear {
   clear: both; }
 
 .wrapper {
@@ -122,53 +124,82 @@ header {
         background: url("images/callback.png") no-repeat left center;
         padding-left: 20px; }
 
-ul.menu, .button {
+ul.menu_top, .button {
   white-space: nowrap;
   display: inline-block;
   vertical-align: top;
   clear: both; }
-  ul.menu.request, .button.request {
+  ul.menu_top:hover .orange, .button:hover .orange {
+    background: #f19245 url(images/orange_hover.png); }
+  ul.menu_top:hover .left_side.orange, .button:hover .left_side.orange {
+    background: url(images/orange_hover_left.png) no-repeat; }
+  ul.menu_top:hover .right_side.orange, .button:hover .right_side.orange {
+    background: url(images/orange_hover_right.png) right top no-repeat; }
+  ul.menu_top:active .orange, .button:active .orange {
+    background: #c05b14 url(images/orange_active.png); }
+  ul.menu_top:active .left_side.orange, .button:active .left_side.orange {
+    background: url(images/orange_active_left.png) no-repeat; }
+  ul.menu_top:active .right_side.orange, .button:active .right_side.orange {
+    background: url(images/orange_active_right.png) right top no-repeat; }
+  ul.menu_top:hover .green, .button:hover .green {
+    background: #88b329 url(images/green_hover.png); }
+  ul.menu_top:hover .left_side.green, .button:hover .left_side.green {
+    background: url(images/green_hover_left.png) no-repeat; }
+  ul.menu_top:hover .right_side.green, .button:hover .right_side.green {
+    background: url(images/green_hover_right.png) right top no-repeat; }
+  ul.menu_top:active .green, .button:active .green {
+    background: #71981b url(images/green_active.png); }
+  ul.menu_top:active .left_side.green, .button:active .left_side.green {
+    background: url(images/green_active_left.png) no-repeat; }
+  ul.menu_top:active .right_side.green, .button:active .right_side.green {
+    background: url(images/green_active_right.png) right top no-repeat; }
+  ul.menu_top.request, .button.request {
     margin-left: 23px;
     margin-right: 5px; }
-  ul.menu li, .button li {
+  ul.menu_top li, .button li {
     list-style-type: none;
     float: left;
-    background: #004b9c url("images/menu.png");
     border-left: 1px solid #165ea2;
     border-right: 1px solid #0b3054; }
-    ul.menu li.orange, .button li.orange {
+    ul.menu_top li.menu, .button li.menu {
+      background: #004b9c url("images/menu.png"); }
+      ul.menu_top li.menu:hover, .button li.menu:hover {
+        background: #0970c7 url("images/menu_hover.png"); }
+      ul.menu_top li.menu:active, .button li.menu:active {
+        background: #035ba2 url("images/menu_active.png"); }
+    ul.menu_top li.orange, .button li.orange {
       background: #cc6d28 url("images/orange_btn.png"); }
-    ul.menu li.green, .button li.green {
+    ul.menu_top li.green, .button li.green {
       background: #709c1a url("images/green_btn.png"); }
-    ul.menu li.first, .button li.first {
+    ul.menu_top li.first, .button li.first {
       border-left: none; }
-    ul.menu li.last, .button li.last {
+    ul.menu_top li.last, .button li.last {
       border-right: none; }
-    ul.menu li.borderless, .button li.borderless {
+    ul.menu_top li.borderless, .button li.borderless {
       border: none;
       width: 3px;
       height: 42px; }
-    ul.menu li.left_side, .button li.left_side {
+    ul.menu_top li.left_side, .button li.left_side {
       background: url("images/left_menu.png") no-repeat; }
-      ul.menu li.left_side.orange, .button li.left_side.orange {
+      ul.menu_top li.left_side.orange, .button li.left_side.orange {
         background: url("images/orange_btn_left.png") no-repeat; }
-      ul.menu li.left_side.green, .button li.left_side.green {
+      ul.menu_top li.left_side.green, .button li.left_side.green {
         background: url("images/green_btn_left.png") no-repeat; }
-    ul.menu li.right_side, .button li.right_side {
+    ul.menu_top li.right_side, .button li.right_side {
       background: url("images/right_menu.png") right top no-repeat; }
-      ul.menu li.right_side.orange, .button li.right_side.orange {
+      ul.menu_top li.right_side.orange, .button li.right_side.orange {
         background: url("images/orange_btn_right.png") right top no-repeat; }
-      ul.menu li.right_side.green, .button li.right_side.green {
+      ul.menu_top li.right_side.green, .button li.right_side.green {
         background: url("images/green_btn_right.png") right top no-repeat; }
-    ul.menu li.man a, .button li.man a {
+    ul.menu_top li.man a, .button li.man a {
       background: url("images/man.png") no-repeat left center;
       padding-left: 14px;
       margin-left: 14px; }
-    ul.menu li.pen a, .button li.pen a {
+    ul.menu_top li.pen a, .button li.pen a {
       background: url("images/pen.png") no-repeat left center;
       padding-left: 16px;
       margin-left: 16px; }
-    ul.menu li a, .button li a {
+    ul.menu_top li a, .button li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
@@ -331,24 +362,28 @@ ul.menu, .button {
     font-size: 24px;
     padding-left: 34px;
     margin-bottom: 15px; }
-  .infoblock p.info {
-    font-size: 13px;
-    border-bottom: 1px solid #e1e1e1;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    line-height: 20px; }
-  .infoblock strong {
-    font-weight: bold;
-    font-size: 16px; }
-  .infoblock p.call_num {
-    font-size: 12px;
-    margin: 15px 0;
-    margin-bottom: 20px; }
-    .infoblock p.call_num span {
-      font-size: 14px;
-      font-weight: bold; }
+
+p.info {
+  font-size: 13px;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  line-height: 20px; }
+
+strong {
+  font-weight: bold;
+  font-size: 16px; }
+
+p.call_num {
+  font-size: 12px;
+  margin: 15px 0;
+  margin-bottom: 20px; }
+  p.call_num span {
+    font-size: 14px;
+    font-weight: bold; }
 
 .work_with_us {
+  margin-top: 80px;
   clear: both;
   position: relative; }
   .work_with_us h2 {
@@ -403,3 +438,110 @@ footer {
         display: block;
         font-size: 16px;
         background: url("images/white_phone.png") no-repeat 35px 22px; }
+
+.breadcrumbs {
+  margin: 20px 0;
+  font-size: 12px; }
+  .breadcrumbs a {
+    text-decoration: none;
+    border-bottom: 1px solid #aabeda; }
+  .breadcrumbs .del {
+    margin: 0 10px; }
+
+ol {
+  list-style: decimal;
+  margin: 20px 0;
+  margin-left: 35px; }
+  ol li {
+    margin: 15px 0;
+    padding-left: 5px;
+    font-size: 13px;
+    color: #005bab; }
+    ol li span {
+      color: #343434; }
+
+ul.rb {
+  list-style-image: url("images/bullet.png");
+  margin: 20px 0;
+  margin-left: 35px;
+  font-size: 13px; }
+  ul.rb li {
+    margin: 15px 0;
+    padding-left: 5px; }
+
+p {
+  font-size: 13px;
+  line-height: 20px; }
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 30px; }
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+  margin-top: 40px; }
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  margin-top: 30px; }
+
+table {
+  color: #545454; }
+  table thead {
+    border-bottom: 3px solid #e1e1e1; }
+    table thead td {
+      font-weight: bold; }
+  table td {
+    min-width: 135px;
+    padding: 15px 20px;
+    border: 1px solid #e1e1e1; }
+
+.review {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  margin-bottom: 30px; }
+  .review .border {
+    background: url("images/border_review.png") no-repeat;
+    width: 170px;
+    height: 210px; }
+  .review .border img, .review .cap {
+    margin-left: 10px;
+    font-size: 13px;
+    max-width: 159px;
+    max-height: 190px;
+    margin-top: 10px; }
+  .review .cap {
+    display: block; }
+
+.sidebar {
+  display: inline-block;
+  vertical-align: top;
+  width: 150px;
+  margin: 20px 0; }
+  .sidebar a {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-decoration: none; }
+    .sidebar a span {
+      border-bottom: 1px solid #aabeda; }
+    .sidebar a.active {
+      color: #717171;
+      cursor: default; }
+      .sidebar a.active span {
+        border: none; }
+
+.leftbar {
+  display: inline-block;
+  vertical-align: top;
+  width: 740px;
+  margin-left: 30px;
+  margin-top: 15px; }
