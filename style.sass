@@ -63,7 +63,7 @@ header
       span.p1, span.p2
         padding-left: 3px
     .descr
-      font-size: 68%
+      font-size: 11px
 
   .contacts
     text-align: right
@@ -114,6 +114,7 @@ ul.menu_top, .button
   clear: both
   +button_state('orange', #f19245, #c05b14)
   +button_state('green', #88b329, #71981b)
+  +button_state('grey', #c6c6c6, #a5a5a5)
   &.request
     margin-left: 23px
     margin-right: 5px
@@ -132,6 +133,8 @@ ul.menu_top, .button
       background: #cc6d28 url('images/orange_btn.png')
     &.green
       background: #709c1a url('images/green_btn.png')
+    &.grey
+      background: #bfbfbf url('images/grey_btn.png')
     &.first
       border-left: none
     &.last
@@ -153,7 +156,7 @@ ul.menu_top, .button
       &.green
         background: url('images/green_btn_right.png') right top no-repeat
     &.man a
-      background: url('images/man.png') no-repeat left 12px
+      background: url('images/man.png') no-repeat left 13px
       padding-left: 16px
       margin-left: 12px
 
@@ -237,9 +240,10 @@ $arr_top: 90px
   width: 94%
   +border-radius(3px)
   a.all_jobs
-    margin-top: 10px
+    right: 40px
+    top: 30px
     color: black
-    float: right
+    position: absolute
     text-decoration: none
     font-size: 12px
     span
@@ -250,7 +254,7 @@ $arr_top: 90px
     font-size: 24px
     font-weight: bold
     color: #343434
-
+    margin-top: 0
     img
       margin-right: 10px
       margin-bottom: -7px
@@ -347,7 +351,7 @@ p.call_num
   .partners 
     margin-top: 25px
     a
-      margin-right: 20px
+      margin-right: 15px
       img
         border: 1px solid #e1e1e1
         &:hover
@@ -367,6 +371,10 @@ footer
     margin-bottom: 7px
     span
       border-bottom: 1px solid #959595
+    &:hover
+      color: #fafafa
+      span
+        border-color: transparent
   .column
     display: inline-block
     vertical-align: top
@@ -490,3 +498,88 @@ table
   width: 740px
   margin-left: 30px
   margin-top: 15px
+.table
+  clear: both
+  .td
+    width: 300px
+    display: inline-block
+    vertical-align: top
+    margin: 0
+    padding: 0
+.req
+  margin-top: 30px
+  .td
+    &.sw
+      width: 380px
+      margin-left: 40px
+    h3
+      margin: 0
+      color: #525252
+    &.sws
+      border-top: 1px solid #e1e1e1
+      padding-top: 20px
+.range
+  display: block
+  margin: 10px 0
+  position: relative
+  .handlers
+    padding-top: 25px
+    position: relative
+    .handler
+      position: absolute
+      top: 0
+      z-index: 99
+      cursor: pointer
+      width: 16px
+      background: url('images/range_input_handler.png') no-repeat
+      height: 21px
+  .input_r
+    height: 15px
+    position: relative
+    background: url('images/range_input.png') no-repeat
+    .bar
+      background: url('images/range_input_bar.png') repeat-x
+      cursor: pointer
+      height: 10px
+      top: 0
+      position: absolute
+      display: inline-block
+hr
+  border: none
+  outline: none
+  background: #e1e1e1
+  height: 1px
+.capt
+  font-size: 13px
+  color: #616161
+  display: inline-block
+  margin-right: 10px
+  vertical-align: baseline
+.input
+  display: inline-block
+  position: relative
+  &.min input
+    font-weight: bold
+    width: 35px
+    text-align: center
+  input
+    border: none
+    padding: 0 15px
+    height: 26px
+    font-size: 13px
+    outline: none
+    background: url('images/input.png') repeat-x
+  .left_b
+    float: left
+    background: url('images/input_left.png') no-repeat
+    height: 26px
+    position: absolute
+    width: 6px
+  .right_b
+    float: right
+    background: url('images/input_right.png') no-repeat
+    height: 26px
+    width: 6px
+    position: absolute
+    right: 0
+    top: 0
