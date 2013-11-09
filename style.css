@@ -89,7 +89,7 @@ header {
       header .phone .number span.p1, header .phone .number span.p2 {
         padding-left: 3px; }
     header .phone .descr {
-      font-size: 68%; }
+      font-size: 11px; }
   header .contacts {
     text-align: right;
     width: 410px;
@@ -157,6 +157,18 @@ ul.menu_top, .button {
     background: url(images/green_active_left.png) no-repeat; }
   ul.menu_top:active .right_side.green, .button:active .right_side.green {
     background: url(images/green_active_right.png) right top no-repeat; }
+  ul.menu_top:hover .grey, .button:hover .grey {
+    background: #c6c6c6 url(images/grey_hover.png); }
+  ul.menu_top:hover .left_side.grey, .button:hover .left_side.grey {
+    background: url(images/grey_hover_left.png) no-repeat; }
+  ul.menu_top:hover .right_side.grey, .button:hover .right_side.grey {
+    background: url(images/grey_hover_right.png) right top no-repeat; }
+  ul.menu_top:active .grey, .button:active .grey {
+    background: #a5a5a5 url(images/grey_active.png); }
+  ul.menu_top:active .left_side.grey, .button:active .left_side.grey {
+    background: url(images/grey_active_left.png) no-repeat; }
+  ul.menu_top:active .right_side.grey, .button:active .right_side.grey {
+    background: url(images/grey_active_right.png) right top no-repeat; }
   ul.menu_top.request, .button.request {
     margin-left: 23px;
     margin-right: 5px; }
@@ -175,6 +187,10 @@ ul.menu_top, .button {
       background: #cc6d28 url("images/orange_btn.png"); }
     ul.menu_top li.green, .button li.green {
       background: #709c1a url("images/green_btn.png"); }
+    ul.menu_top li.grey, .button li.grey {
+      height: 40px;
+      text-align: center;
+      background: #bfbfbf url("images/grey_btn.png"); }
     ul.menu_top li.first, .button li.first {
       border-left: none; }
     ul.menu_top li.last, .button li.last {
@@ -183,16 +199,22 @@ ul.menu_top, .button {
       border: none;
       width: 3px;
       height: 42px; }
+      ul.menu_top li.borderless.grey, .button li.borderless.grey {
+        height: 40px; }
     ul.menu_top li.left_side, .button li.left_side {
       background: url("images/left_menu.png") no-repeat; }
       ul.menu_top li.left_side.orange, .button li.left_side.orange {
         background: url("images/orange_btn_left.png") no-repeat; }
+      ul.menu_top li.left_side.grey, .button li.left_side.grey {
+        background: url("images/grey_btn_left.png") no-repeat; }
       ul.menu_top li.left_side.green, .button li.left_side.green {
         background: url("images/green_btn_left.png") no-repeat; }
     ul.menu_top li.right_side, .button li.right_side {
       background: url("images/right_menu.png") right top no-repeat; }
       ul.menu_top li.right_side.orange, .button li.right_side.orange {
         background: url("images/orange_btn_right.png") right top no-repeat; }
+      ul.menu_top li.right_side.grey, .button li.right_side.grey {
+        background: url("images/grey_btn_right.png") right top no-repeat; }
       ul.menu_top li.right_side.green, .button li.right_side.green {
         background: url("images/green_btn_right.png") right top no-repeat; }
     ul.menu_top li.man a, .button li.man a {
@@ -559,3 +581,93 @@ table {
   width: 740px;
   margin-left: 30px;
   margin-top: 15px; }
+
+.table {
+  clear: both; }
+  .table .td {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0; }
+
+.req {
+  margin-top: 30px; }
+  .req .td.sw {
+    width: 380px;
+    margin-left: 40px; }
+  .req .td h3 {
+    margin: 0;
+    color: #525252; }
+  .req .td.sws {
+    border-top: 1px solid #e1e1e1;
+    padding-top: 20px; }
+
+.range {
+  display: block;
+  margin: 10px 0;
+  position: relative; }
+  .range .handlers {
+    padding-top: 25px;
+    position: relative; }
+    .range .handlers .handler {
+      position: absolute;
+      top: 0;
+      z-index: 99;
+      cursor: pointer;
+      width: 16px;
+      background: url("images/range_input_handler.png") no-repeat;
+      height: 21px; }
+  .range .input_r {
+    height: 15px;
+    position: relative;
+    background: url("images/range_input.png") no-repeat; }
+    .range .input_r .bar {
+      background: url("images/range_input_bar.png") repeat-x;
+      cursor: pointer;
+      height: 10px;
+      top: 0;
+      position: absolute;
+      display: inline-block; }
+
+hr {
+  border: none;
+  outline: none;
+  background: #e1e1e1;
+  height: 1px; }
+
+.capt {
+  font-size: 13px;
+  color: #616161;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: baseline; }
+
+.input {
+  display: inline-block;
+  position: relative; }
+  .input.min input {
+    font-weight: bold;
+    width: 35px;
+    text-align: center; }
+  .input input {
+    border: none;
+    padding: 0 15px;
+    height: 26px;
+    font-size: 13px;
+    outline: none;
+    background: url("images/input.png") repeat-x; }
+  .input .left_b {
+    float: left;
+    background: url("images/input_left.png") no-repeat;
+    height: 26px;
+    position: absolute;
+    width: 6px; }
+  .input .right_b {
+    float: right;
+    background: url("images/input_right.png") no-repeat;
+    height: 26px;
+    width: 6px;
+    position: absolute;
+    right: 0;
+    top: 0; }
