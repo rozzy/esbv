@@ -60,14 +60,15 @@ header
     .number
       font-weight: 600
       font-size: 20px
-    
+      span.p1, span.p2
+        padding-left: 3px
     .descr
-      font-size: 11px
+      font-size: 68%
 
   .contacts
     text-align: right
     width: 410px
-
+    padding-top: 10px
     ul.languages
       margin-bottom: 10px
 
@@ -97,6 +98,7 @@ header
     a.local
       font-size: 12px
       margin-left: 18px
+      padding-bottom: 2px
       &.skype
         background: url('images/skype.png') no-repeat left center
         padding-left: 24px
@@ -151,13 +153,14 @@ ul.menu_top, .button
       &.green
         background: url('images/green_btn_right.png') right top no-repeat
     &.man a
-      background: url('images/man.png') no-repeat left center
-      padding-left: 14px
-      margin-left: 14px
+      background: url('images/man.png') no-repeat left 12px
+      padding-left: 16px
+      margin-left: 12px
+
     &.pen a
       background: url('images/pen.png') no-repeat left center
-      padding-left: 16px
-      margin-left: 16px
+      padding-left: 20px
+      margin-left: 12px
     a
       color: white
       text-decoration: none
@@ -268,6 +271,8 @@ $arr_top: 90px
       &:hover
         background: #eceae1
         border-color: #e0ded1
+        a
+          border-bottom-color: #eceae1
       a, span
         display: block
         font-size: 12px
@@ -281,6 +286,7 @@ $arr_top: 90px
         margin-left: 12px
         text-decoration: none
         border-bottom: 1px solid lighten($link, 50%)
+        margin-bottom: 10px
       span.place
         font-size: 12px
         margin: 10px 0
@@ -290,6 +296,7 @@ $arr_top: 90px
         color: #e3943e
         margin-left: 12px
         font-size: 12
+        font-weight: bold
         u
           text-decoration: none
           font-size: 18px
