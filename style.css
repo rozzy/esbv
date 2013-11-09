@@ -86,11 +86,14 @@ header {
     header .phone .number {
       font-weight: 600;
       font-size: 20px; }
+      header .phone .number span.p1, header .phone .number span.p2 {
+        padding-left: 3px; }
     header .phone .descr {
-      font-size: 11px; }
+      font-size: 68%; }
   header .contacts {
     text-align: right;
-    width: 410px; }
+    width: 410px;
+    padding-top: 10px; }
     header .contacts ul.languages {
       margin-bottom: 10px; }
       header .contacts ul.languages li {
@@ -116,7 +119,8 @@ header {
             background-position: -111px 0; }
     header .contacts a.local {
       font-size: 12px;
-      margin-left: 18px; }
+      margin-left: 18px;
+      padding-bottom: 2px; }
       header .contacts a.local.skype {
         background: url("images/skype.png") no-repeat left center;
         padding-left: 24px; }
@@ -192,13 +196,13 @@ ul.menu_top, .button {
       ul.menu_top li.right_side.green, .button li.right_side.green {
         background: url("images/green_btn_right.png") right top no-repeat; }
     ul.menu_top li.man a, .button li.man a {
-      background: url("images/man.png") no-repeat left center;
-      padding-left: 14px;
-      margin-left: 14px; }
+      background: url("images/man.png") no-repeat left 12px;
+      padding-left: 16px;
+      margin-left: 12px; }
     ul.menu_top li.pen a, .button li.pen a {
       background: url("images/pen.png") no-repeat left center;
-      padding-left: 16px;
-      margin-left: 16px; }
+      padding-left: 20px;
+      margin-left: 12px; }
     ul.menu_top li a, .button li a {
       color: white;
       text-decoration: none;
@@ -319,6 +323,8 @@ ul.menu_top, .button {
       .jobs ul.jobs_list li:hover {
         background: #eceae1;
         border-color: #e0ded1; }
+        .jobs ul.jobs_list li:hover a {
+          border-bottom-color: #eceae1; }
       .jobs ul.jobs_list li a, .jobs ul.jobs_list li span {
         display: block;
         font-size: 12px; }
@@ -330,7 +336,8 @@ ul.menu_top, .button {
         font-weight: bold;
         margin-left: 12px;
         text-decoration: none;
-        border-bottom: 1px solid #abd8ff; }
+        border-bottom: 1px solid #abd8ff;
+        margin-bottom: 10px; }
       .jobs ul.jobs_list li span.place {
         font-size: 12px;
         margin: 10px 0;
@@ -339,7 +346,8 @@ ul.menu_top, .button {
       .jobs ul.jobs_list li span.price {
         color: #e3943e;
         margin-left: 12px;
-        font-size: 12; }
+        font-size: 12;
+        font-weight: bold; }
         .jobs ul.jobs_list li span.price u {
           text-decoration: none;
           font-size: 18px; }
